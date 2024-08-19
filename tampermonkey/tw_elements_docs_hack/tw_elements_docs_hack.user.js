@@ -35,6 +35,10 @@
         })
     }
 
+    function showInfoToSaleTrial() {
+        document.getElementById('newDC-sale-trial').firstChild.firstChild.innerHTML = 'PRO version hack by Hiếu iceTea'
+    }
+
     function showLogInfoCompete() {
         console.log(
             'RUN OK | from: tw_elements_docs_hack.user.js | by: Hiếu iceTea. (https://fb.com/Hieu.iceTea)' +
@@ -52,6 +56,7 @@
         activeDocsTabApiBtn()
         activeButtonShowCode()
         changeProIconColor()
+        showInfoToSaleTrial()
         showLogInfoCompete()
     }, 1000)
 })();
