@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         tw-elements docs hack
 // @namespace    http://tampermonkey.net/
-// @version      1.2.0
+// @version      1.2.1
 // @description  tw-elements docs hack. Tắt popup "Access restricted" hiện lên khi xem code mẫu hoặc tài liệu API của những component bị khóa (component trả phí).
 // @author       Hieu iceTea
 // @match        https://tw-elements.com/docs/*
@@ -12,9 +12,16 @@
 // ==/UserScript==
 
 (function () {
+    // Bản quyền thuộc về tác giả Hiếu iceTea (https://fb.com/Hieu.iceTea).
+
     'use strict';
 
-    // Bản quyền thuộc về tác giả Hiếu iceTea (https://fb.com/Hieu.iceTea).
+    //
+    //      Config
+    //
+
+    // delay
+    const delayStart = 2000;
 
     function activeDocsTabApiBtn() {
         const docsTabApiBtn = document.getElementById('docs-tab-api')
@@ -58,5 +65,5 @@
         changeProIconColor()
         showInfoToSaleTrial()
         showLogInfoCompete()
-    }, 1000)
+    }, delayStart)
 })();
